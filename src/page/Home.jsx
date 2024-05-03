@@ -1,5 +1,6 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     const [data, setData] = useState([])
@@ -12,7 +13,7 @@ const Home = () => {
   return (
     <div className='container'>
         <h2 className='flex mb-2 text-3xl text-gray-900'>CRUD App with JSON Server</h2>
-        <button className='flex mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Create +</button>
+        <Link to='/Create' className='flex max-w-28 mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Create +</Link>
         <table className='table w-full text-sm text-left text-gray-500'>
             <thead>
                 <tr className='text-xs text-gray-700 uppercase bg-gray-200'>
