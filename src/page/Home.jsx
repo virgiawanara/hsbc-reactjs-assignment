@@ -10,13 +10,17 @@ const Home = () => {
     }, [])
 
   return (
-    <div className='container mt-5'>
+    <div className='container'>
+        <h2 className='flex mb-2 text-3xl text-gray-900'>CRUD App with JSON Server</h2>
+        <button className='flex mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Create +</button>
         <table className='table w-full text-sm text-left text-gray-500'>
             <thead>
                 <tr className='text-xs text-gray-700 uppercase bg-gray-200'>
                     <th scope='col' className='px-6 py-3'>ID</th>
                     <th scope='col' className='px-6 py-3'>Name</th>
                     <th scope='col' className='px-6 py-3'>Country</th>
+                    <th scope='col' className='px-6 py-3'>Age</th>
+                    <th scope='col' className='px-6 py-3'>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,6 +29,11 @@ const Home = () => {
                         <td scope='row' className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap'>{d.id}</td>
                         <td className='px-6 py-4'>{d.name}</td>
                         <td className='px-6 py-4'>{d.country}</td>
+                        <td className='px-6 py-4'>{d.age}</td>
+                        <td className='inline-flex'>
+                            <button className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l'>UPDATE</button>
+                            <button className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r'>EDIT</button>
+                        </td>
                     </tr>
                 ))}
             </tbody>
